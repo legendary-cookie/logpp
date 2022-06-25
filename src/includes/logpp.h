@@ -6,10 +6,10 @@ namespace logpp {
 class Logger {
 public:
   std::string lname;
-  Logger(std::string name) {
+  Logger(std::string name) {
 	  lname = name;
   }
-  Logger() {
+  Logger() {
 	  lname = "Global";
   }
 	

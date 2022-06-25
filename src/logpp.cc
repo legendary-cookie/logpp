@@ -4,9 +4,9 @@
 #include <iostream>
 #include <sstream>
 
-namespace logpp {
+namespace logpp {
 
-  static std::string wrap(std::string s) {
+  static std::string wrap(std::string s) {
     std::ostringstream oss;
     oss << "[" << s << "]";
     return oss.str();
@@ -26,15 +26,15 @@ namespace logpp {
     return oss.str();
   }
 
-  void Logger::info(std::string s) {
+  void Logger::info(std::string s) {
     std::cout << get_common_head("INFO") << s << std::endl;
   }
 
-  void Logger::err(std::string s) {
+  void Logger::err(std::string s) {
     std::cerr << get_common_head("ERR") << s << std::endl;
   }
-  void Logger::warn(std::string s) {
+  void Logger::warn(std::string s) {
     std::cerr << get_common_head("WARN") << s << std::endl;
   }
 
-} // namespace  
+} // namespace logpp
