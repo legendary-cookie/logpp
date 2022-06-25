@@ -20,9 +20,9 @@ namespace logpp {
     return oss.str();
   }
 
-  static std::string get_common_head(std::string s) {
+  std::string Logger::get_common_head(std::string s) {
     std::ostringstream oss;
-    oss << wrap(get_ts()) << " " << wrap(s) << " ";
+    oss << wrap(get_ts()) << " " << wrap(s) << " " << wrap(lname) << " ";
     return oss.str();
   }
 
